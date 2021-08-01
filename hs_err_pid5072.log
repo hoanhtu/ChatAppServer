@@ -1,0 +1,198 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes for Failed to commit area from 0x0000000702600000 to 0x0000000712400000 of length 266338304.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3310), pid=5072, tid=14220
+#
+# JRE version:  (13.0.8+5) (build )
+# Java VM: OpenJDK 64-Bit Server VM (13.0.8+5-MTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dmongodb.uri=mongodb+srv://tuho:Tuho1998@cluster0.dcekq.mongodb.net/player?retryWrites=true&w=majority -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.4\lib\idea_rt.jar=53314:C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.4\bin -Dfile.encoding=UTF-8 ConnectMongo
+
+Host: Intel(R) Core(TM) i5-8257U CPU @ 1.40GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1023)
+Time: Sun Aug  1 14:36:05 2021 SE Asia Standard Time elapsed time: 0.011893 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000199a1a59800):  JavaThread "Unknown thread" [_thread_in_vm, id=14220, stack(0x0000005684100000,0x0000005684200000)]
+
+Stack: [0x0000005684100000,0x0000005684200000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x63393a]
+V  [jvm.dll+0x7de7ca]
+V  [jvm.dll+0x7dff7f]
+V  [jvm.dll+0x7e05c3]
+V  [jvm.dll+0x250d78]
+V  [jvm.dll+0x630baa]
+V  [jvm.dll+0x625865]
+V  [jvm.dll+0x31027c]
+V  [jvm.dll+0x3100b2]
+V  [jvm.dll+0x315826]
+V  [jvm.dll+0x35c3a6]
+V  [jvm.dll+0x35bb80]
+V  [jvm.dll+0x2eab0a]
+V  [jvm.dll+0x2ebda2]
+V  [jvm.dll+0x7bb2f8]
+V  [jvm.dll+0x369d89]
+V  [jvm.dll+0x79e0d5]
+V  [jvm.dll+0x3d456f]
+V  [jvm.dll+0x3d6ad1]
+C  [jli.dll+0x520f]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffa86999748, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000199a1ac6800 GCTaskThread "GC Thread#0" [stack: 0x0000005684200000,0x0000005684300000] [id=17696]
+  0x00000199a1ae7800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000005684300000,0x0000005684400000] [id=19916]
+  0x00000199a1ae9800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000005684400000,0x0000005684500000] [id=20612]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa8614aa07]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000199a1a56280] Heap_lock - owner thread: 0x00000199a1a59800
+
+Heap address: 0x0000000702600000, size: 4058 MB, Compressed Oops mode: Non-zero based: 0x0000000702600000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.008 Loaded shared library C:\Program Files\Zulu\zulu-13\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff6f33b0000 - 0x00007ff6f33bd000 	C:\Program Files\Zulu\zulu-13\bin\java.exe
+0x00007ffab7070000 - 0x00007ffab7265000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffab6d90000 - 0x00007ffab6e4d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffab4c50000 - 0x00007ffab4f19000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffab48b0000 - 0x00007ffab49b0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffaae510000 - 0x00007ffaae525000 	C:\Program Files\Zulu\zulu-13\bin\VCRUNTIME140.dll
+0x00007ffab2370000 - 0x00007ffab2387000 	C:\Program Files\Zulu\zulu-13\bin\jli.dll
+0x00007ffab5290000 - 0x00007ffab5430000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffab50b0000 - 0x00007ffab50d2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa9fe50000 - 0x00007ffaa00ea000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffab6b50000 - 0x00007ffab6b7a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffab6710000 - 0x00007ffab67ae000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffab4ae0000 - 0x00007ffab4beb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffab4a40000 - 0x00007ffab4add000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffab50e0000 - 0x00007ffab5110000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffa9fc20000 - 0x00007ffa9fcbb000 	C:\Program Files\Zulu\zulu-13\bin\msvcp140.dll
+0x00007ffa85e50000 - 0x00007ffa86a41000 	C:\Program Files\Zulu\zulu-13\bin\server\jvm.dll
+0x00007ffab69d0000 - 0x00007ffab6a7c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffab67b0000 - 0x00007ffab684b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffab5dc0000 - 0x00007ffab5eea000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffab5ef0000 - 0x00007ffab5ef8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffab2350000 - 0x00007ffab2359000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa965f0000 - 0x00007ffa96617000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffaac2b0000 - 0x00007ffaac2ba000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffab6e50000 - 0x00007ffab6ebb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffab30c0000 - 0x00007ffab30d2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffab23a0000 - 0x00007ffab23b0000 	C:\Program Files\Zulu\zulu-13\bin\verify.dll
+0x00007ffab2560000 - 0x00007ffab2744000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffaacf20000 - 0x00007ffaacf4c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffab49b0000 - 0x00007ffab4a33000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffaae480000 - 0x00007ffaae4a6000 	C:\Program Files\Zulu\zulu-13\bin\java.dll
+0x00007ffab2300000 - 0x00007ffab230a000 	C:\Program Files\Zulu\zulu-13\bin\jimage.dll
+0x00007ffaaf310000 - 0x00007ffaaf31e000 	C:\Program Files\Zulu\zulu-13\bin\instrument.dll
+0x00007ffaae460000 - 0x00007ffaae477000 	C:\Program Files\Zulu\zulu-13\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Zulu\zulu-13\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Zulu\zulu-13\bin\server
+
+VM Arguments:
+jvm_args: -Dmongodb.uri=mongodb+srv://tuho:Tuho1998@cluster0.dcekq.mongodb.net/player?retryWrites=true&w=majority -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.4\lib\idea_rt.jar=53314:C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.4\bin -Dfile.encoding=UTF-8 
+java_command: ConnectMongo
+java_class_path (initial): C:\ChatAppServer\out\production\classes;C:\Users\Tu\.gradle\caches\modules-2\files-2.1\org.mongodb\mongodb-driver-sync\4.0.5\8b9ca4d604954f9073bfce778a187fa398cf0365\mongodb-driver-sync-4.0.5.jar;C:\Users\Tu\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-log4j12\1.7.29\92df0e670a2373f4f90d3dab158a5219c68ed4eb\slf4j-log4j12-1.7.29.jar;C:\Users\Tu\.gradle\caches\modules-2\files-2.1\org.mongodb\mongodb-driver-core\4.0.5\7821f471ba77f582f577e726f2c16f0c21576c6b\mongodb-driver-core-4.0.5.jar;C:\Users\Tu\.gradle\caches\modules-2\files-2.1\org.mongodb\bson\4.0.5\437a0a4a81ffecd5fd92bbc586842cf9f8f265d6\bson-4.0.5.jar;C:\Users\Tu\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.29\e56bf4473a4c6b71c7dd397a833dce86d1993d9d\slf4j-api-1.7.29.jar;C:\Users\Tu\.gradle\caches\modules-2\files-2.1\log4j\log4j\1.2.17\5af35056b4d257e4b64b9e8069c0746e8b08629f\log4j-1.2.17.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4255121408                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4255121408                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Python39\Scripts\;C:\Python39\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Cocos\Cocos2d-x\Cocos2d-x-3.10\templates;C:\Cocos\Cocos2d-x\Cocos2d-x-3.10\tools\cocos2d-console\bin;C:\Users\Tu\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.4\bin;;C:\Users\Tu\AppData\Roaming\npm;C:\Users\Tu\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=Tu
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1023)
+OS uptime: 9 days 11:32 hours
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 16230M (1810M free)
+TotalPageFile size 28525M (AvailPageFile size 222M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 61M, peak: 315M
+
+vm_info: OpenJDK 64-Bit Server VM (13.0.8+5-MTS) for windows-amd64 JRE (13.0.8+5-MTS) (Zulu13.42+17-CA), built on Jul 11 2021 18:28:31 by "zulu_re" with MS VC++ 15.9 (VS2017)
+
+END.
